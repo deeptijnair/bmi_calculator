@@ -7,14 +7,21 @@
     <title>BMI Calculator</title>
 </head>
 <body>
-    <h1>BMI Calculator</h1>
-    <form id="bmiform">
-        <label>Height (in cm):</label>
-        <input type="number" id="height">
-        <label>Weight (in kg):</label>
-        <input type ="number" id="weight">
-        <button type="button" id="calculateBmi">Calculate BMI</button>
-    </form>
+    <div id="container">
+        <h1>BMI Calculator</h1>
+        <form id="bmiform">
+            <label>Height (in cm):</label>
+            <input type="number" id="height">
+            <label>Weight (in kg):</label>
+            <input type ="number" id="weight">
+            <button type="button" id="calculateBmi" onclick="calculateBMI()">Calculate BMI</button>
+        </form>
     
+        <div id="result"> 
+            Result:<span id="bmiValue"></span>
+        </div>
+        <button id="resetButton" onclick="resetForm()">Reset</button>
+    </div>
+    <script src="bmi.js"></script>
 </body>
 </html>
