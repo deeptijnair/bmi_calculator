@@ -48,7 +48,8 @@ label{
 #result{
     border: #b12626 solid 2px;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom:15px;
     width:fit-content;
     font-size: large;
     font-weight: bold;
@@ -58,7 +59,6 @@ label{
     font-size:larger;   
     width:fit-content;
     margin-top: 15px;
-    margin-bottom: 20px;
     padding:10px;
     border-radius: 10px;
     background-color: #c13636;
