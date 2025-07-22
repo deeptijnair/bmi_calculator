@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>BMI Calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="container">
+      <div id="header">
         <h1>BMI Calculator</h1>
+      </div>
+      <div id="formContainer">
         <form id="bmiform">
-            <label>Height (in cm):</label>
-            <input type="number" id="height">
-            <label>Weight (in kg):</label>
-            <input type ="number" id="weight">
-            <button type="button" id="calculateBmi" onclick="calculateBMI()">Calculate Your BMI</button>
-            <button id="resetButton" onclick="resetForm()">Reset</button>
+          <label>Height (in cm):</label>
+          <input type="number" id="height" value="" />
+          <label>Weight (in kg):</label>
+          <input type="number" id="weight" value="" />
+          <button type="button" id="calculateBmi" onclick="calculateBMI()">
+            Calculate Your BMI
+          </button>
+          <button id="resetButton" onclick="resetForm()">Reset</button>
+          <div id="result">Result:<span id="bmiValue"></span></div>
         </form>
-    
-        <div id="result"> 
-            Result:<span id="bmiValue"></span>
-        </div>
+      </div>
     </div>
-
     <script src="bmi.js"></script>
-</body>
+  </body>
 </html>
-

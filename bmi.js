@@ -1,36 +1,31 @@
-// document.getElementById("calculateBmi").disabled = true;
-// document.getElementById("resetButton").disabled = true;
+let result = document.getElementById("result");
+let resetButton = document.getElementById("resetButton");
 
-// if(document.getElementById("height").value !== "" && document.getElementById("weight").value !== "") {
-//     document.getElementById("calculateBmi").disabled = false;
-//     document.getElementById("resetButton").disabled = false;
-// }
+result.style.display = "none";
 
+function calculateBMI() {
+  let height = parseInt(document.getElementById("height").value);
+  let weight = parseInt(document.getElementById("weight").value);
+  document.getElementById("bmiValue").innerHTML =
+    "<span style='color:red'>Please enter valid height and weight.</span>";
 
-function calculateBMI(){
-    let height = document.getElementById("height").value;
-    let weight = document.getElementById("weight").value;
-    let result = document.getElementById("result");
-
-
-    
-    if (height <= 0 || weight <= 0) {
+  if (height <= 0 || weight <= 0) {
+    document.getElementById("bmiValue").innerHTML = " ";
     result.innerHTML = "Please enter valid height and weight.";
     // return;
-
-    }else if(height && weight) {
-        let heightInMeters = height / 100; // Convert height from cm to meters
-        let bmi = (weight) / (heightInMeters * heightInMeters);
-        document.getElementById("bmiValue").innerHTML = bmi.toFixed(2);
- 
-    }
-
+  } else if (height && weight) {
+    let heightInMeters = height / 100; // Convert height from cm to meters
+    let bmi = weight / (heightInMeters * heightInMeters);
+    result.style.display = "block";
+    document.getElementById("bmiValue").innerHTML = bmi.toFixed(2);
+    result.innerHTML = "Your BMI is: " + bmi.toFixed(2);
+  }
 }
 
-function resetForm(){
-    document.getElementById("height").value = "";
-    document.getElementById("weight").value = "";
-    document.getElementById("bmiValue").innerHTML = "";
-    result.innerHTML = "Result:"
-
+function resetForm() {
+  document.getElementById("height").value = "";
+  document.getElementById("weight").value = "";
+  document.getElementById("bmiValue").innerHTML = "";
+  resetButton.style.display = "none";
+  result.style.display = "none";
 }
